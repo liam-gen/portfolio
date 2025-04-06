@@ -1,0 +1,375 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600&display=swap");
+
+:root {
+  --background-color: #1f1f1f;
+  --accent-color: #0888de;
+  --text-color: #babec4;
+  --font-family: Poppins;
+  --section-color: #9ac8eb;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header {
+  color: var(--accent-color);
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+}
+
+header nav ul a {
+  color: var(--text-color);
+  font-weight: bold;
+  transition: all 0.5s;
+}
+
+header nav ul a:hover {
+  color: #ebebeb;
+}
+
+header h4 {
+  margin: 0;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 50px;
+}
+
+main h4 {
+  font-size: 23px;
+}
+
+main .main_header {
+  margin-top: 50px;
+}
+
+main .main_header h1 {
+  font-size: 30px;
+}
+
+main .main_header h2 {
+  font-size: 22px;
+  font-weight: 300;
+}
+
+main section {
+  width: 80%;
+}
+
+main section .container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+main section .container div {
+  color: var(--background-color);
+  padding: 10px;
+  border-radius: 8px;
+  flex: 1;
+}
+
+main section .container div:not(.subcontainer div) {
+  background: var(--section-color);
+}
+
+main section .container .subcontainer {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+main #skills .container {
+  flex-direction: column;
+  gap: 30px;
+}
+
+main #skills .subcontainer div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  flex-wrap: wrap;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+main section .container .subcontainer div:hover {
+  transform: scale(1.2);
+}
+
+main section .container .subcontainer div:hover .level {
+  background: var(--background-color);
+  color: lightgreen !important;
+}
+
+main #skills h5 {
+  font-size: 17px;
+  margin: 0;
+}
+
+main #skills i {
+  font-size: 50px;
+  color: var(--accent-color);
+  margin: 0;
+}
+
+main #skills img {
+  width: 50px;
+  height: 50px;
+  margin: 0;
+}
+
+main #skills h6 {
+  font-size: 15px;
+  margin: 0;
+}
+
+main #skills .level {
+  font-size: 10px;
+  color: darkslategrey;
+  margin: 0;
+  padding: 5px;
+  border-radius: 6px;
+  transition: all 0.5s;
+  width: 100px;
+}
+
+main #services .container {
+  display: flex;
+  justify-content: center;
+}
+
+main #services .container div {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+main #services .container div button {
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(45deg, #0ce39a, #69007f, #fc0987);
+  padding: 14px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+main #services .container div button span {
+  position: relative;
+  z-index: 1;
+}
+
+main #services .container div button::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: black;
+  border-radius: 9px;
+  transition: 0.5s;
+}
+
+main #services .container div button:hover::before {
+  opacity: 0.7;
+}
+
+main #services .container div button::after {
+  content: "";
+  position: absolute;
+  inset: 0px;
+  background: linear-gradient(45deg, #0ce39a, #69007f, #fc0987);
+  border-radius: 9px;
+  transition: 0.5s;
+  opacity: 0;
+  filter: blur(20px);
+}
+
+main #services .container div button:hover:after {
+  opacity: 1;
+}
+
+main #projects .container {
+  justify-content: space-around;
+}
+
+main #projects .container div {
+  flex: unset;
+  max-width: 500px;
+}
+
+main #projects img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+main .contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main .contact form {
+  width: 50%;
+  background: var(--section-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 16px;
+}
+
+input[type="text"],
+textarea,
+input[type="email"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-right: 0px;
+  margin-left: 0px;
+  resize: vertical;
+}
+
+label {
+  margin-right: 0px;
+  margin-left: 0px;
+  width: 100%;
+}
+
+form label,
+form h2 {
+  color: var(--background-color);
+  text-align: center;
+}
+
+input[type="submit"] {
+  background-color: #1255a2;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #1872d9;
+}
+
+textarea {
+  height: 200px;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+.accent {
+  color: var(--accent-color);
+}
+
+.cta {
+  position: relative;
+  margin: auto;
+  padding: 12px 18px;
+  transition: all 0.2s ease;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.cta:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 50px;
+  background: #b1dae7;
+  width: 45px;
+  height: 45px;
+  transition: all 0.3s ease;
+}
+
+.cta span {
+  position: relative;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--accent-color);
+}
+
+.cta svg {
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: var(--accent-color);
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+}
+
+.cta:hover:before {
+  width: 100%;
+  background: #b1dae7;
+}
+
+.cta:hover svg {
+  transform: translateX(0);
+}
+
+.cta:active {
+  transform: scale(0.95);
+}
+
+footer {
+  text-align: center;
+  padding: 5px;
+}
+
+@media screen and (max-width: 1200px) {
+  header {
+    display: none !important;
+  }
+
+  .cta:before {
+    width: 100%;
+    background: #b1dae7;
+  }
+}

@@ -1,0 +1,14 @@
+{
+    "exactProcesses": [
+      "MSPCManager", "Lively", "PowerToys", "FanControl", "flux", "Razer Central",
+        "Razer Synapse 3", "GameServiceManager", "Razer Central Service", "Everything",
+        "TranslucentTB", "GoogleDriveFS", "Nextcloud", "Microsoft SharePoint", 
+        "Microsoft Office Click-to-Run (SxS)", "Microsoft Office Click-to-Run Service", 
+        "GameManagerService3", "GameManagerService3 (32 bits)", "TeamViewer", 
+        "Papercut.Service", "FileZilla Server", "Windows Subsystem for Linux Service", 
+        "Razer Chroma SDK Service Host", "Razer Chroma SDK Service Host (32 bits)", "OpenVPNConnect"
+    ],
+    "containsProcesses": [
+      "Razer"
+    ]
+  }
